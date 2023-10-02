@@ -12,8 +12,12 @@ builder.Services.AddCors(options =>
 });
 // Add services to the container.
 builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
-builder.Services.AddTransient<ITruyenRepository, TruyenRepository>();
-builder.Services.AddTransient<ITruyenBusiness, TruyenBusiness>();
+builder.Services.AddTransient<IstoriesRepository, storiesRepository>();
+builder.Services.AddTransient<IstoriesBusiness, storiesBusiness>();
+
+builder.Services.AddTransient<IcategoriesRepository, categoriesRopository>();
+builder.Services.AddTransient<IcategoriesBusiness, categoriesBusiness>();
+
 
 
 // configure strongly typed settings objects
