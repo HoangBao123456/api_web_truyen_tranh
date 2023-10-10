@@ -1,0 +1,145 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.content {
+    @include container;
+
+    .items_start {
+        display: flex;
+
+        .ct_item {
+            flex: 70%;
+
+            .head_title {
+                .head_title_global {
+                    h2 {
+                        color: #424b54;
+
+                        span {
+                            border-bottom: 1px solid #333;
+                            padding-bottom: 0.25rem;
+
+                        }
+                    }
+                }
+            }
+
+            .list_story {
+                margin-right: 20px;
+                margin-top: 20px;
+
+                .story_item {
+                    .item {
+                        img {
+                            width: 20%;
+                        }
+                    }
+
+                    .story_info {
+                        display: flex;
+
+                        .flex_colum {
+                            flex: 1;
+
+                            .flex_wrap {
+                                margin: 0px;
+                                display: flex;
+
+                                h3 {
+                                    font-size: 1.1rem;
+                                    margin: 0px;
+                                    margin-right: 20px;
+
+                                    a {
+                                        text-decoration: none;
+                                        color: #333;
+                                    }
+                                }
+
+                                .rounded_pill_full {
+                                    margin-right: 5px;
+                                    background-color: #198754;
+                                    color: white;
+                                    border-radius: 0.25rem;
+                                    padding: 0px 5px;
+                                    font-size: 1rem;
+                                }
+
+                                .rounded_pill_hot {
+                                    background-color: #dc3545;
+                                    color: white;
+                                    border-radius: 0.25rem;
+                                    padding: 0px 5px;
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            .text_secondary {
+                                a {
+                                    @include a;
+                                }
+                            }
+                        }
+
+                        .story_chapter {
+                            flex: 1;
+                            text-align: right;
+                            @include a;
+                            color: #0dcaf0;
+                        }
+
+                        .story_chapter:hover {
+                            transition: 0.3s;
+                            color: #535151;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sticky_top {
+            flex: 30%;
+            position: sticky;
+            top: 0;
+            .rounded {
+                background-color: #f8f9fa;
+                border-radius: 0.25rem;
+
+                p {
+                    padding: 10px;
+                    color: #7a7c7e;
+                }
+
+                .head_title {
+                    .title_global {
+                        h2 {
+                            padding-bottom: 0.25rem;
+                            border-bottom: 1px solid #5a5959;
+                            padding: 10px;
+                            span {
+                                color: #5a5959;
+                            }
+                        }
+                    }
+                }
+
+                .row {
+                    .list_category {
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            list-style: none;
+                            flex: 50%;
+                            margin: 10px 0px;
+                            a{
+                                text-decoration: none;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

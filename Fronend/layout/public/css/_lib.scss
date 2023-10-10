@@ -1,0 +1,36 @@
+@mixin container {
+    max-width: 1170px;
+    margin: 0px auto;
+    font-size: 1.1rem;
+}
+
+@mixin a {
+    text-decoration: none;
+    color: #4E4E4E;
+}
+
+@mixin h2 {
+    h2 {
+        max-width: 100%;
+        color: #4E4E4E;
+        text-transform: uppercase;
+        border-bottom: 1px solid #CCC;
+
+        svg {
+            font-size: 16px;
+        }
+
+        span {
+            border-bottom: 1px solid #333;
+            height: 100%;
+            display: inline-block;
+        }
+    }
+}
+
+@mixin display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,96 @@
+.header_bottom {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    margin-top: -15px;
+
+    .container {
+        @include container;
+
+        p {
+            padding: 0.25rem;
+        }
+    }
+}
+
+.content {
+    @include container;
+
+    .text {
+        text-align: center;
+        text-decoration: none;
+        color: rgb(104, 104, 235);
+    }
+
+    .chapter_nav {
+        .btn {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                background-color: #198754;
+                color: white;
+                padding: 8px;
+                border-radius: 0.5rem;
+            }
+
+            .chapter_jump {
+                border: none;
+
+                .btn_success {
+                    background-color: #198754;
+                    padding: 14px 20px;
+                    border-radius: 0.5rem;
+                    color: white;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .chapter_end {
+        background: url(//static.8cache.com/img/spriteimg_new_white_op.png) 0 -51px;
+        width: 277px;
+        height: 35px;
+        border: none;
+    }
+
+    .content_chapter {
+        font-family: "Palatino Linotype", "Arial", "Times New Roman", sans-serif;
+        line-height: 2;
+        color: #2B2B2B;
+        font-size: 22px;
+    }
+
+    .group_story {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .box {
+            padding: 10px;
+            width: 40%;
+            text-align: center;
+        }
+    }
+    .mt_5{
+        margin-top: 3rem;
+    }
+    .text_center{
+        text-align: center;
+        margin-bottom: 20px;
+        .btn_warning{
+            color: white;
+            background-color: #ffc107;
+            padding: 10px 20px;
+            border-radius: 0.5rem;
+        }
+        .btn_info{
+            color: white;
+            background-color: #0dcaf0;
+            padding: 10px 20px;
+            border-radius: 0.5rem;
+        }
+        .btn_warning,.btn_info:hover{
+            cursor: pointer;
+        }
+    }
+}
