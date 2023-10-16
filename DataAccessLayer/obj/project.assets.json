@@ -1259,11 +1259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataAccessLayer\\obj\\",
+      "outputPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1280,8 +1280,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataModel\\DataModel.csproj": {
-              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataModel\\DataModel.csproj"
+            "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataModel\\DataModel.csproj": {
+              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataModel\\DataModel.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cPTc05LbFZkPzmbvS7J23rKgb2EBHE5twr0BzQSHZ6mVEped7C0XH48zDB1wW7sOa0mvhw5f7gs7KNuvXdnN3A==",
+  "dgSpecHash": "TTvhPXaXGubTBx3KnbhvaDM+liuGsimrD/mJq4Te5mnzlDcKaum6N2ibEenz8C3cZ6k1oCZM6nXkkNyDPo+zrQ==",
   "success": true,
-  "projectFilePath": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",

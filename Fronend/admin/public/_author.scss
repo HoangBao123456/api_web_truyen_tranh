@@ -1,0 +1,53 @@
+.card {
+    .card_body {
+        .form_serch {
+            display: flex;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 1rem;
+            width: 85%;
+
+            .search {
+                margin: 15px;
+
+                .form_control {
+                    padding: 8px;
+                    border-radius: 0.3rem;
+                }
+
+                .btn {
+                    padding: 5px 10px;
+                    border-radius: 0.3rem;
+                    background-color: #4484e3;
+                    color: #fff;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .table {
+        table {
+            width: 85%;
+
+            tbody {
+                background-color: #fff;
+                tr {
+                    td {
+                        text-align: center;
+
+                        .d-flex {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px 0px;
+
+                            a {
+                                margin: 0px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

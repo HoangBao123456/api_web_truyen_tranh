@@ -1,5 +1,4 @@
 <?php
-    require './lib/admin.php';
     get_layout_admin('sections','head_admin');
     get_layout_admin('sections','siderbar')
 ?>
