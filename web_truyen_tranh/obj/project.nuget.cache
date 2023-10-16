@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jg0U6NoxlIeCq5CxVobyxqqfvWhNWSgeyrxIXYV4D4ECSezcKW9xyyTl/WND+7sNNhj3rt5i1MI8ABjqRFcw1A==",
+  "dgSpecHash": "Lhk3U1K5Vzymf2y9JNdPFXBI9lPmFBw6yGPzapJRe9VwlxQxTKOXZ1eCCQSFRwx7JoZ4Le00yDtIb8YpxSkIFQ==",
   "success": true,
-  "projectFilePath": "D:\\Đồ án 1\\web_truyen_tranh\\web_truyen_tranh\\web_truyen_tranh.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\web_truyen_tranh\\web_truyen_tranh\\web_truyen_tranh\\web_truyen_tranh.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    font-family: "Montserrat",Helvetica,Arial,serif;;
+    .main_menu {
+        background-color: #283046;
+        min-width: 260px;
+        position: fixed;
+        height: 100%;
+        .nav_header{
+            font-size: .9rem;
+            padding: 0px 20px;
+            a{
+                .brand_logo{
+                    svg{
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+        .menu_content{
+            ul{
+                list-style: none;
+                color: #fff;
+                .nav_item{
+                    line-height: 3;
+                    a{
+                        color: #b4b7bd;
+                        text-decoration: none;
+                        font-size: 1.1rem;
+                        display: block;
+                    }
+                }
+                .nav_item:hover{
+                    cursor: pointer;
+                }
+                .nav_item:hover a{
+                    color: red;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    .app_content{
+        margin-left: 260px;
+        height: 100vh;
+        .content_wrapper{
+            padding: 20px;
+            .content_header{
+                h3{
+                    color: #636363;
+                }
+            }
+            .content_match{
+                display: flex;
+                .card{
+                    background-color: #fff;
+                    margin-right: 30px;
+                    padding: 5px 20px;
+                    border-radius: 1rem;
+                    font-size: 1.2rem;
+                    .card_body{
+                        .card_title{
+                            font-size: 1rem;
+                            color: #5e5873;
+                        }
+                        .text{
+                            color: #4484e3;
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .card_header{
+                        .card_title{
+                            font-size: 1rem;
+                            color: #5e5873;
+                        }
+                    }
+                    
+                }
+                .card_right{
+                    width: 50%;
+                    .card_body_right{
+                        display: flex;
+                        .left,.right{
+                            flex: 20%;
+                            display: flex;
+                            align-items: center;
+                            .badge{
+                            margin-right: 1rem;
+                            }
+                            .card_info{
+                                color: #5e5873;
+                                h5{
+                                    margin: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        margin-left: 260px;
+        padding: 0.8rem 4rem;
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+    }
+}

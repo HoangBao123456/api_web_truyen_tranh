@@ -1,0 +1,61 @@
+.content_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content_header{
+        flex: 1;
+        width: 75%;
+    }
+    .add_users{
+        flex: 0.2;
+        a{
+            background-color:#28c76f;
+            padding: 10px;
+            color: #fff;
+            border-radius: 0.7rem;
+            text-decoration: none;
+        }
+    }
+}
+.content_match{
+    .card_users{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 270px;
+        .avatar{
+            margin-left: 30px;
+            color: #28c76f;
+            .avatar_content{
+                background-color: rgba(40,199,111,.12);
+                align-items: center;
+                border-radius: 50%;
+                display: flex;
+                height: 50px;
+                justify-content: center;
+                width: 50px;
+                svg{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            .no_avatar{
+                background-color: rgba(177, 172, 169, 0.12);
+                color: rgb(135, 125, 125);
+            }
+        }
+        .avatar:hover{
+            cursor: pointer;
+        }
+    }
+}
+.table{
+    margin-left: 20px;
+    .card{
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        width: 85%;
+    }
+}

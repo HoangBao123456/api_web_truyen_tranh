@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  font-family: "Montserrat", Helvetica, Arial, serif;
+}
+body .main_menu {
+  background-color: #283046;
+  min-width: 260px;
+  position: fixed;
+  height: 100%;
+}
+body .main_menu .nav_header {
+  font-size: 0.9rem;
+  padding: 0px 20px;
+}
+body .main_menu .nav_header a .brand_logo svg {
+  margin: 10px;
+}
+body .main_menu .menu_content ul {
+  list-style: none;
+  color: #fff;
+}
+body .main_menu .menu_content ul .nav_item {
+  line-height: 3;
+}
+body .main_menu .menu_content ul .nav_item a {
+  color: #b4b7bd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+body .main_menu .menu_content ul .nav_item:hover {
+  cursor: pointer;
+}
+body .main_menu .menu_content ul .nav_item:hover a {
+  color: red;
+  transition: 0.3s;
+}
+body .app_content {
+  margin-left: 260px;
+  height: 100vh;
+}
+body .app_content .content_wrapper {
+  padding: 20px;
+}
+body .app_content .content_wrapper .content_header h3 {
+  color: #636363;
+}
+body .app_content .content_wrapper .content_match {
+  display: flex;
+}
+body .app_content .content_wrapper .content_match .card {
+  background-color: #fff;
+  margin-right: 30px;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+body .app_content .content_wrapper .content_match .card .card_body .card_title {
+  font-size: 1rem;
+  color: #5e5873;
+}
+body .app_content .content_wrapper .content_match .card .card_body .text {
+  color: #4484e3;
+  font-size: 1.2rem;
+}
+body .app_content .content_wrapper .content_match .card .card_header .card_title {
+  font-size: 1rem;
+  color: #5e5873;
+}
+body .app_content .content_wrapper .content_match .card_right {
+  width: 50%;
+}
+body .app_content .content_wrapper .content_match .card_right .card_body_right {
+  display: flex;
+}
+body .app_content .content_wrapper .content_match .card_right .card_body_right .left, body .app_content .content_wrapper .content_match .card_right .card_body_right .right {
+  flex: 20%;
+  display: flex;
+  align-items: center;
+}
+body .app_content .content_wrapper .content_match .card_right .card_body_right .left .badge, body .app_content .content_wrapper .content_match .card_right .card_body_right .right .badge {
+  margin-right: 1rem;
+}
+body .app_content .content_wrapper .content_match .card_right .card_body_right .left .card_info, body .app_content .content_wrapper .content_match .card_right .card_body_right .right .card_info {
+  color: #5e5873;
+}
+body .app_content .content_wrapper .content_match .card_right .card_body_right .left .card_info h5, body .app_content .content_wrapper .content_match .card_right .card_body_right .right .card_info h5 {
+  margin: 0px;
+}
+body .footer {
+  margin-left: 260px;
+  padding: 0.8rem 4rem;
+}
+body .footer .left {
+  float: left;
+}
+body .footer .right {
+  float: right;
+}
+
+.content_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_row .content_header {
+  flex: 1;
+  width: 75%;
+}
+.content_row .add_users {
+  flex: 0.2;
+}
+.content_row .add_users a {
+  background-color: #28c76f;
+  padding: 10px;
+  color: #fff;
+  border-radius: 0.7rem;
+  text-decoration: none;
+}
+
+.content_match .card_users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 270px;
+}
+.content_match .card_users .avatar {
+  margin-left: 30px;
+  color: #28c76f;
+}
+.content_match .card_users .avatar .avatar_content {
+  background-color: rgba(40, 199, 111, 0.12);
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+.content_match .card_users .avatar .avatar_content svg {
+  width: 25px;
+  height: 25px;
+}
+.content_match .card_users .avatar .no_avatar {
+  background-color: rgba(177, 172, 169, 0.12);
+  color: rgb(135, 125, 125);
+}
+.content_match .card_users .avatar:hover {
+  cursor: pointer;
+}
+
+.table {
+  margin-left: 20px;
+}
+.table .card {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  width: 85%;
+}/*# sourceMappingURL=style.css.map */
