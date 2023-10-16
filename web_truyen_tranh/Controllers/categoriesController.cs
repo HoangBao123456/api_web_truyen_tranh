@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BusinessLogicLayer;
 using DataModel;
@@ -15,12 +15,19 @@ namespace web_truyen_tranh.Controllers
         {
             _categoriesBusiness = categoriesBusiness;
         }
+        [Route("get_list_categories")]
+        [HttpGet]
+        public List<categoriesModel> GetData()
+        {
+            return _categoriesBusiness.GetData();
+        }
         [Route("get_by-name/{name}")]
         [HttpGet]
         public categoriesModel GetDatabyName(string name)
         {
             return _categoriesBusiness.GetDatabyName(name);
         }
+       
         [Route("create-categories")]
         [HttpPost]
         public categoriesModel CreateItem([FromBody] categoriesModel model)
