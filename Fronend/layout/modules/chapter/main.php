@@ -1,13 +1,6 @@
 <?php
 get_header();
 ?>
-        <div class="header_bottom">
-            <div class="container">
-                <p>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật
-                    liên
-                    tục.</p>
-            </div>
-        </div>
         <div class="content">
             <a href="" class="text">
                 <h1>Vũ cực thiên hạ</h1>

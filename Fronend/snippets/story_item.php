@@ -1,11 +1,11 @@
 <?php
-$render = db_connect('api/stories/get_list_stories');
+$render = db_render('api/stories/get_list_stories');
 ?>
 <?php
 foreach ($render as $item) {
 ?>
     <div class="item">
-        <a href="?mod=category&act=detail">
+        <a href="?mod=info&act=detail&id=<?php echo $item['id'] ?>">
             <img src="<?php echo $item['images'] ?>" alt="">
             <div class="title">
                 <div class="name">
@@ -16,4 +16,4 @@ foreach ($render as $item) {
     </div>
 <?php
 }
-?>
+?> 

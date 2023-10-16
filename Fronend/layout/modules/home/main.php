@@ -1,5 +1,6 @@
 <?php
 get_header();
+$render = db_render('api/categories/get_list_categories')
 ?>
 <div class="content">
     <div class="intro">
@@ -26,9 +27,7 @@ get_header();
                 <div class="list-new">
                     <table>
                         <?php
-                        for ($i = 0; $i < 7; $i++) {
-                            get('snippets', 'story_item_no_img');
-                        }
+                        get('snippets', 'story_item_no_img');
                         ?>
                     </table>
                 </div>
@@ -80,38 +79,17 @@ get_header();
                         <h2><span>thể loại truyện</span></h2>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <div class="col-right">
-                                <a href="">Tiên hiệp</a>
+                        <?php
+                        foreach ($render as $item) {
+                        ?>
+                            <div class="col">
+                                <div class="col-right">
+                                    <a href="?mod=category&act=detail"><?php echo $item['name_categories'] ?></a>
+                                </div>
                             </div>
-                            <div class="col-left">
-                                <a href="">Kiếm hiệp</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="col-right">
-                                <a href="">Tiên hiệp</a>
-                            </div>
-                            <div class="col-left">
-                                <a href="">Kiếm hiệp</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="col-right">
-                                <a href="">Tiên hiệp</a>
-                            </div>
-                            <div class="col-left">
-                                <a href="">Kiếm hiệp</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="col-right">
-                                <a href="">Tiên hiệp</a>
-                            </div>
-                            <div class="col-left">
-                                <a href="">Kiếm hiệp</a>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -130,9 +108,7 @@ get_header();
             </div>
             <div class="row">
                 <?php
-                for ($i = 0; $i < 10; $i++) {
-                    get('snippets', 'story_item_full');
-                }
+                get('snippets', 'story_item_full');
                 ?>
             </div>
         </div>

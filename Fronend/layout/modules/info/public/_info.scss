@@ -1,0 +1,46 @@
+.intro{
+    .index-intro{
+        display: flex;
+        align-items: center;
+        .images{
+            flex: 1;
+            img{
+                width: 70%;
+            }
+        }
+        .title{
+            flex: 3;
+            .story{
+                color: rgb(70, 68, 68);
+            }
+        }
+    }
+    .story_detail{
+        .info{
+            p{
+                a{
+                    text-decoration: none;
+                    color: rgb(116, 103, 103);
+                }
+            }
+        }
+    }
+    .list-index{
+        .list-story{
+            .list_chapter{
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        flex: 50%;
+                        margin: 8px 0px;
+                        a{
+                            text-decoration: none;
+                            color: rgb(48, 46, 46);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

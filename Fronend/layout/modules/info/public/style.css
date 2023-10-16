@@ -1,0 +1,32 @@
+.intro .index-intro {
+  display: flex;
+  align-items: center;
+}
+.intro .index-intro .images {
+  flex: 1;
+}
+.intro .index-intro .images img {
+  width: 70%;
+}
+.intro .index-intro .title {
+  flex: 3;
+}
+.intro .index-intro .title .story {
+  color: rgb(70, 68, 68);
+}
+.intro .story_detail .info p a {
+  text-decoration: none;
+  color: rgb(116, 103, 103);
+}
+.intro .list-index .list-story .list_chapter ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro .list-index .list-story .list_chapter ul li {
+  flex: 50%;
+  margin: 8px 0px;
+}
+.intro .list-index .list-story .list_chapter ul li a {
+  text-decoration: none;
+  color: rgb(48, 46, 46);
+}/*# sourceMappingURL=style.css.map */
