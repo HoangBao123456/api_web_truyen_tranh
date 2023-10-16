@@ -24,6 +24,10 @@ namespace BusinessLogicLayer
         {
             return _res.GetDatabyName(name);
         }
+        public storiesModel GetDatabyId(string id)
+        {
+            return _res.GetDatabyId(id);
+        }
 
         public bool Update(storiesModel model)
         {

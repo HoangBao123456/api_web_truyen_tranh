@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public partial interface IcategoriesRepository
+    public partial interface IcategoriesBusiness
     {
         categoriesModel GetDatabyName(string name);
+        List<categoriesModel> GetData();
+
         bool Create(categoriesModel model);
         bool Update(categoriesModel model);
         bool Delete(string id);

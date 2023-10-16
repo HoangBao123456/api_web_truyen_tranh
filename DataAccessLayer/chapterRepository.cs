@@ -8,13 +8,44 @@ namespace DataAccessLayer
         {
             _dbHelper = dbHelper;
         }
-        public chapterModel GetDatabychapter(string chapter)
+        public List<chapterModel> GetDatabychapter(string stories_id)
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_chapter",
-                     "@chapter", chapter);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_list_chapter",
+                     "@story_id", stories_id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<chapterModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<chapterModel> GetData()
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_list");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<chapterModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public chapterModel GetDatabyId(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_id_chapter",
+                     "@id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<chapterModel>().FirstOrDefault();
@@ -30,9 +61,9 @@ namespace DataAccessLayer
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "create_chapter",
-                "@story_id", model.story_id,
-                "@chapter", model.chapter,
                 "@name", model.name,
+                "@chapter", model.chapter,
+                "@name_chapter", model.name_chapter,
                 "@content", model.content
                 );
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
@@ -53,9 +84,9 @@ namespace DataAccessLayer
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "update_chapter",
                   "@id", model.id,
-                "@story_id", model.story_id,
+                "@story_id", model.name,
                 "@chapter", model.chapter,
-                "@name", model.name,
+                "@name", model.name_chapter,
                 "@content", model.content
                 );
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))

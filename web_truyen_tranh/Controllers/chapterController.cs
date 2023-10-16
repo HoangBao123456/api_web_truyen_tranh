@@ -15,11 +15,23 @@ namespace web_truyen_tranh.Controllers
         {
             _truyenBusiness = truyenBusiness;
         }
-        [Route("get_by-chapter/{chapter}")]
+        [Route("get_list")]
         [HttpGet]
-        public chapterModel GetDatabychapter(string chapter)
+        public List<chapterModel> GetData()
         {
-            return _truyenBusiness.GetDatabychapter(chapter);
+            return _truyenBusiness.GetData();
+        }
+        [Route("get_by-id/{id}")]
+        [HttpGet]
+        public chapterModel GetDatabyId(string id)
+        {
+            return _truyenBusiness.GetDatabyId(id);
+        }
+        [Route("get_list_chapter/{stories_id}")]
+        [HttpGet]
+        public List<chapterModel> GetDatabychapter(string stories_id)
+        {
+            return _truyenBusiness.GetDatabychapter(stories_id);
         }
         [Route("create-chapter")]
         [HttpPost]

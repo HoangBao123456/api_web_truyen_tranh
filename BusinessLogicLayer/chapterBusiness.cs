@@ -11,16 +11,23 @@ namespace BusinessLogicLayer
         {
             _res = res;
         }
+        public List<chapterModel> GetData()
+        {
+            return _res.GetData();
+        }
         public bool Create(chapterModel model)
         {
             return _res.Create(model);
         }
 
-        public chapterModel GetDatabychapter(string chapter)
+        public List<chapterModel> GetDatabychapter(string stories_id)
         {
-            return _res.GetDatabychapter(chapter);
+            return _res.GetDatabychapter(stories_id);
         }
-
+        public chapterModel GetDatabyId(string id)
+        {
+            return _res.GetDatabyId(id);
+        }
         public bool Update(chapterModel model)
         {
             return _res.Update(model);

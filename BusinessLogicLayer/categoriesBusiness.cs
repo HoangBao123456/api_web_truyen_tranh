@@ -11,6 +11,10 @@ namespace BusinessLogicLayer
         {
             _res = res;
         }
+        public List<categoriesModel> GetData()
+        {
+            return _res.GetData();
+        }
         public bool Create(categoriesModel model)
         {
             return _res.Create(model);

@@ -24,6 +24,22 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+        public storiesModel GetDatabyId(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_stories_id",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<storiesModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public List<storiesModel> GetData()
         {
             string msgError = "";

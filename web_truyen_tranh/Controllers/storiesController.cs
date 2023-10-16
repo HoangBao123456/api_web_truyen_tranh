@@ -15,6 +15,18 @@ namespace web_truyen_tranh.Controllers
         {
             _truyenBusiness = truyenBusiness;
         }
+        [Route("get_list_stories")]
+        [HttpGet]
+        public List<storiesModel> GetData()
+        {
+            return _truyenBusiness.GetData();
+        }
+        [Route("get_by-id/{id}")]
+        [HttpGet]
+        public storiesModel GetDatabyId(string id)
+        {
+            return _truyenBusiness.GetDatabyId(id);
+        }
         [Route("get_by-name/{name}")]
         [HttpGet]
         public storiesModel GetDatabyName(string name)
