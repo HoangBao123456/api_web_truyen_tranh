@@ -1,6 +1,9 @@
 <?php
+$render = db_render("api/account/get_account");
+$sum = db_render("api/account/get_sum");
+$sum_no = db_render("api/account/get_sum-no");
 get_layout_admin('sections', 'head_admin');
-get_layout_admin('sections', 'siderbar')
+get_layout_admin('sections', 'siderbar');
 ?>
 <div class="app_content">
     <div class="content_wrapper">
@@ -9,7 +12,7 @@ get_layout_admin('sections', 'siderbar')
                 <h3>01 Người dùng</h3>
             </div>
             <div class="add_users">
-                <a href="">
+                <a href="?mod=user&act=create">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -21,7 +24,7 @@ get_layout_admin('sections', 'siderbar')
         <div class="content_match">
             <div class="card card_users">
                 <div class="card_body">
-                    <h3 class="card_title">2</h3>
+                    <h3 class="card_title"><?php echo $sum['sum_user'] ?></h3>
                     <span>Tổng số người dùng</span>
                 </div>
                 <div class="avatar">
@@ -35,7 +38,7 @@ get_layout_admin('sections', 'siderbar')
             </div>
             <div class="card card_users">
                 <div class="card_body">
-                    <h3 class="card_title">0</h3>
+                    <h3 class="card_title"><?php echo $sum_no['sum_user_no'] ?></h3>
                     <span>Số người dùng không hoạt động</span>
                 </div>
 
@@ -88,77 +91,48 @@ get_layout_admin('sections', 'siderbar')
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Email</th>
+                            <th>Họ và tên</th>
                             <th>Vai trò</th>
                             <th>Trạng thái</th>
-                            <th>IP đăng nhập<br>gần nhất</th>
-                            <th>TG đăng nhập<br>gần nhất</th>
                             <th>Tác vụ</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <div class="avatar">
-                                    <span class="avatar-content">
-                                        A
+                        <?php
+                        foreach ($render as $item) {
+                        ?>
+                            <tr>
+                                <td>
+                                    <div class="avatar">
+                                        <span class="avatar-content">
+                                            <?php echo $item['avatar'] ?>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td><?php echo $item['fullname'] ?></td>
+
+                                <td>
+                                    <span class="users">
+                                        <?php echo $item['role'] ?>
                                     </span>
-                                </div>
-                            </td>
-                            <td>admin@gmail.com</td>
-    
-                            <td>
-                                <span class="users">
-                                    Admin
-                                </span>
-                            </td>
-                            <td>
-                                <span class="active">
-                                    Hoạt động
-                                </span>
-                            </td>
-                            <td>113.160.133.144</td>
-                            <td>16-10-2023 09:45:12</td>
-                            <td>
-                                <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit font-medium-2 text-body">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="avatar">
-                                    <span class="avatar-content">
-                                        C
+                                </td>
+                                <td>
+                                    <span class="active">
+                                        <?php echo $item['status'] ?>
                                     </span>
-                                </div>
-                            </td>
-                            <td>content@gmail.com</td>
-    
-                            <td>
-                                <span class="users">
-                                    Content
-                                </span>
-                            </td>
-                            <td>
-                                <span class="active">
-                                    Hoạt động
-                                </span>
-                            </td>
-                            <td>58.186.167.69</td>
-                            <td>11-10-2023 14:12:01</td>
-                            <td>
-                                <a href="https://suustore.com/admin/users/2/edit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit font-medium-2 text-body">
-                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>
+                                    <a href="?mod=user&act=update&id=<?php echo $item['id'] ?>">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit font-medium-2 text-body">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>

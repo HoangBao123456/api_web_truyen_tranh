@@ -1,0 +1,40 @@
+.card{
+    .card_body{
+        form{
+            .display{
+                display: flex;
+                .sub{
+                    padding: 0px 100px;
+                    label{
+                        display: block;
+                    }
+                    input, select{
+                        width: 20rem;
+                        padding: 0.3rem;
+                        border-radius: 0.3rem;
+                    }
+                    p{
+                        color: red;
+                    }
+                }
+            }
+            .btn{
+                margin: 1rem 7rem;
+                .btn_submit{
+                    background-color: #48cf85;
+                    color: #fff;
+                    border-radius: 0.3rem;
+                    padding: 0.5rem 0.8rem;
+                }
+                a{
+                    background-color: #75797e;
+                    color: #fff;
+                    border-radius: 0.3rem;
+                    padding: 0.5rem 0.8rem;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

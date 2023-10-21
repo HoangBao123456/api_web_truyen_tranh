@@ -1589,11 +1589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\web_truyen_tranh\\web_truyen_tranh.csproj",
+      "projectUniqueName": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\web_truyen_tranh\\web_truyen_tranh.csproj",
       "projectName": "web_truyen_tranh",
-      "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\web_truyen_tranh\\web_truyen_tranh.csproj",
+      "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\web_truyen_tranh\\web_truyen_tranh.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\web_truyen_tranh\\obj\\",
+      "outputPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\web_truyen_tranh\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1610,11 +1610,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataModel\\DataModel.csproj": {
-              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataModel\\DataModel.csproj"
+            "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\DataModel\\DataModel.csproj": {
+              "projectPath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\DataModel\\DataModel.csproj"
             }
           }
         }

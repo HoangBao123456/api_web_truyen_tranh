@@ -1,16 +1,16 @@
 <?php
-$render = db_render("api/author_stories/get_author_quantity");
+$render = db_render("api/categories/get_list_categories");
 get_layout_admin('sections', 'head_admin');
-get_layout_admin('sections', 'siderbar')
+get_layout_admin('sections', 'siderbar');
 ?>
 <div class="app_content">
     <div class="content_wrapper">
         <div class="content_row">
             <div class="content_header">
-                <h3>03 Tác giả</h3>
+                <h3>04 Danh mục</h3>
             </div>
             <div class="add_users">
-                <a href="?mod=author&act=create">
+                <a href="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -23,7 +23,7 @@ get_layout_admin('sections', 'siderbar')
             <div class="card_body">
                 <form method="GET" class="form_serch">
                     <div class="search search_input ">
-                        <input type="text" class="form_control " id="" placeholder="Tìm tác giả" value="">
+                        <input type="text" class="form_control " id="" placeholder="Tìm danh mục" value="">
                     </div>
                     <label class="search">
                         <button class="btn" type="submit">
@@ -42,7 +42,7 @@ get_layout_admin('sections', 'siderbar')
                         <tr>
                             <th></th>
                             <th>Tên</th>
-                            <th>Số truyện</th>
+                            <th>Mô tả</th>
                             <th>Tác vụ</th>
                         </tr>
                     </thead>
@@ -53,10 +53,10 @@ get_layout_admin('sections', 'siderbar')
                             <tr>
                                 <td></td>
                                 <td>
-                                    <?php echo $item['author_name'] ?>
+                                    <?php echo $item['name_categories'] ?>
                                 </td>
                                 <td>
-                                    <?php echo $item['quantity'] ?>
+                                <?php echo $item['descr'] ?>
                                 </td>
                                 <td>
                                     <div class="d-flex">
@@ -68,7 +68,7 @@ get_layout_admin('sections', 'siderbar')
                                         </a>
                                         <form method="post" action="https://suustore.com/admin/author/52">
                                             <input type="hidden" name="_method" value="delete"> <input type="hidden"> <button type="submit">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash font-medium-2 text-body">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <polyline points="3 6 5 6 21 6"></polyline>
                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                 </svg>
@@ -80,13 +80,13 @@ get_layout_admin('sections', 'siderbar')
                         <?php
                         }
                         ?>
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
 
 <?php
 get_layout_admin('sections', 'footer_admin')

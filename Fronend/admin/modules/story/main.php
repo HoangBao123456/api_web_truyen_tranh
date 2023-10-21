@@ -1,5 +1,5 @@
 <?php
-$render = db_render("api/author_stories/get_author_quantity");
+$render = db_render("api/stories/get_list_stories_stars");
 get_layout_admin('sections', 'head_admin');
 get_layout_admin('sections', 'siderbar')
 ?>
@@ -7,10 +7,10 @@ get_layout_admin('sections', 'siderbar')
     <div class="content_wrapper">
         <div class="content_row">
             <div class="content_header">
-                <h3>03 Tác giả</h3>
+                <h3>05 Truyện</h3>
             </div>
             <div class="add_users">
-                <a href="?mod=author&act=create">
+                <a href="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -23,7 +23,7 @@ get_layout_admin('sections', 'siderbar')
             <div class="card_body">
                 <form method="GET" class="form_serch">
                     <div class="search search_input ">
-                        <input type="text" class="form_control " id="" placeholder="Tìm tác giả" value="">
+                        <input type="text" class="form_control " id="" placeholder="Tìm truyện" value="">
                     </div>
                     <label class="search">
                         <button class="btn" type="submit">
@@ -41,9 +41,9 @@ get_layout_admin('sections', 'siderbar')
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Tên</th>
-                            <th>Số truyện</th>
-                            <th>Tác vụ</th>
+                            <th>Ảnh</th>
+                            <th>Tên truyện</th>
+                            <th>Đánh giá</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,11 +52,32 @@ get_layout_admin('sections', 'siderbar')
                         ?>
                             <tr>
                                 <td></td>
-                                <td>
-                                    <?php echo $item['author_name'] ?>
+                                <td class="images">
+                                    <img src="<?php echo $item['images'] ?>" alt="">
                                 </td>
                                 <td>
-                                    <?php echo $item['quantity'] ?>
+                                    <?php echo $item['name'] ?>
+                                </td>
+                                <td class="stars">
+                                    <form action="" method="post">
+                                        <div class="Evalue">
+                                            <div class="value div_star">
+                                                <input type="number" class="star" placeholder="Số sao" value="<?php echo $item['stars'] ?>">
+                                                <small>
+                                                    Số sao
+                                                </small>
+                                            </div>
+                                            <div class="value div_evalue">
+                                                <input type="number" class="evalue" placeholder="Tổng lượt đánh giá" value="<?php echo $item['count'] ?>">
+                                                <small>
+                                                    Tổng lượt đánh giá
+                                                </small>
+                                            </div>
+                                            <div class="btn">
+                                                <button type="button">Lưu</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </td>
                                 <td>
                                     <div class="d-flex">
@@ -80,14 +101,10 @@ get_layout_admin('sections', 'siderbar')
                         <?php
                         }
                         ?>
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
-
-<?php
-get_layout_admin('sections', 'footer_admin')
-?>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TdmzGNf1lmjk/NnLzbhJq5ZBsURj33EH4/dPQBwe5/2Rz/lpm5Ef5bEg9jR3QGUkeVWQU1XYGPmntQDWQz3UUQ==",
+  "dgSpecHash": "5qv4xDz+sa3W4zFfbm2vUXpZLpDVzo39sL+M2HDIEjVo3m13WnIP3P29OXBVGs4ewKz6VBNPjOlgsGBsxL7Vrw==",
   "success": true,
-  "projectFilePath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\DataModel\\DataModel.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\web_truyen_tranh\\admin\\api_web_truyen_tranh\\api\\api_user\\DataModel\\DataModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

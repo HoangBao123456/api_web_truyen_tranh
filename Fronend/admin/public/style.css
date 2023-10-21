@@ -161,4 +161,212 @@ body .footer .right {
   border-radius: 1rem;
   font-size: 1.2rem;
   width: 85%;
+}
+.table .card .card_body form {
+  display: flex;
+  padding: 10px;
+}
+.table .card .card_body form .serch {
+  margin: 0px 10px;
+}
+.table .card .card_body form .serch .form_select {
+  padding: 8px;
+  border-radius: 0.3rem;
+  opacity: 1rem;
+}
+.table .card .card_body form .button_search {
+  margin-left: 15px;
+}
+.table .card .card_body form .button_search button {
+  padding: 5px 8px;
+  background-color: #4484e3;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+.table .card .table_responsive table {
+  width: 100%;
+}
+.table .card .table_responsive table thead {
+  background-color: #f3f2f7;
+  text-transform: uppercase;
+  font-size: 0.857rem;
+}
+.table .card .table_responsive table tbody tr td {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.table .card .table_responsive table tbody tr td .avatar {
+  color: #ea5455;
+  background-color: rgba(234, 84, 85, 0.12);
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 30px;
+}
+
+.from_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #23242a;
+}
+
+.card .card_body .form_serch {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  width: 85%;
+}
+.card .card_body .form_serch .search {
+  margin: 15px;
+}
+.card .card_body .form_serch .search .form_control {
+  padding: 8px;
+  border-radius: 0.3rem;
+}
+.card .card_body .form_serch .search .btn {
+  padding: 5px 10px;
+  border-radius: 0.3rem;
+  background-color: #4484e3;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0px;
+}
+.card .table table {
+  width: 85%;
+}
+.card .table table tbody {
+  background-color: #fff;
+}
+.card .table table tbody tr td {
+  text-align: center;
+}
+.card .table table tbody tr td .d-flex {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.card .table table tbody tr td .d-flex a {
+  margin: 0px 10px;
+}
+
+tbody tr .images img {
+  width: 10%;
+}
+tbody tr .stars {
+  width: 50%;
+}
+tbody tr .stars form .Evalue {
+  display: flex;
+  flex-wrap: wrap;
+}
+tbody tr .stars form .Evalue .value {
+  flex: 1;
+}
+tbody tr .stars form .Evalue .value input {
+  display: block;
+  margin-left: 35%;
+  width: 30%;
+}
+tbody tr .stars form .Evalue .value small {
+  opacity: 5px;
+}
+tbody tr .stars form .Evalue .btn {
+  margin-top: 6px;
+}
+tbody tr .stars form .Evalue .btn button {
+  background-color: #4484e3;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 3px 6px;
+}
+
+.form_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #23242a;
+}
+.form_login .box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+}
+.form_login .box form {
+  position: absolute;
+  background-color: #222;
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form_login .box form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.form_login .box form .inputbox {
+  position: relative;
+  margin-top: 20px;
+}
+.form_login .box form .inputbox input {
+  position: relative;
+  width: 95%;
+  padding: 10px;
+  color: #23242a;
+  font-size: 1em;
+}
+.form_login .box form .inputbox p {
+  color: red;
+}
+.form_login .box form #login {
+  width: 100%;
+  padding: 7px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card .card_body form .display {
+  display: flex;
+}
+.card .card_body form .display .sub {
+  padding: 0px 100px;
+}
+.card .card_body form .display .sub label {
+  display: block;
+}
+.card .card_body form .display .sub input, .card .card_body form .display .sub select {
+  width: 20rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+.card .card_body form .display .sub p {
+  color: red;
+}
+.card .card_body form .btn {
+  margin: 1rem 7rem;
+}
+.card .card_body form .btn .btn_submit {
+  background-color: #48cf85;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.8rem;
+}
+.card .card_body form .btn a {
+  background-color: #75797e;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

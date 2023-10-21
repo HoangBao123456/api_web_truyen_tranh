@@ -1,0 +1,45 @@
+tbody {
+    tr {
+        .images{
+            img{
+                width: 10%;
+            }
+        }
+        .stars {
+            width: 50%;
+
+            form {
+                .Evalue {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .value {
+                        flex: 1;
+
+                        input {
+                            display: block;
+                            margin-left: 35%;
+                            width: 30%;
+                        }
+
+                        small {
+                            opacity: 5px;
+                        }
+                    }
+
+                    .btn {
+                        margin-top: 6px;
+
+                        button {
+                            background-color: #4484e3;
+                            color: #fff;
+                            border-radius: 0.3rem;
+                            padding: 3px 6px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
