@@ -1,0 +1,17 @@
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\DataModel.dll
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\bin\Debug\net6.0\DataModel.pdb
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CopyComplete
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Đồ án 1\admin_web_truyen_tranh\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
