@@ -27,26 +27,5 @@ namespace web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetDatabyCount(count);
         }
-        [Route("create-star")]
-        [HttpPost]
-        public starsModel CreateItem([FromBody] starsModel model)
-        {
-            _truyenBusiness.Create(model);
-            return model;
-        }
-        [Route("update-star")]
-        [HttpPost]
-        public starsModel UpdateItem([FromBody] starsModel model)
-        {
-            _truyenBusiness.Update(model);
-            return model;
-        }
-        [Route("delete-star")]
-        [HttpPost]
-        public IActionResult DeleteItem(string id)
-        {
-            _truyenBusiness.Delete(id);
-            return Ok(new { messange = "xóa thành công" });
-        }
     }
 }

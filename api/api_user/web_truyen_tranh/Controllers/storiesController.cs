@@ -33,26 +33,5 @@ namespace web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetDatabyName(name);
         }
-        [Route("create-soties")]
-        [HttpPost]
-        public storiesModel CreateItem([FromBody] storiesModel model)
-        {
-            _truyenBusiness.Create(model);
-            return model;
-        }
-        [Route("update-truyen")]
-        [HttpPost]
-        public storiesModel UpdateItem([FromBody] storiesModel model)
-        {
-            _truyenBusiness.Update(model);
-            return model;
-        }
-        [Route("delete-truyen")]
-        [HttpPost]
-        public IActionResult DeleteItem(string id)
-        {
-            _truyenBusiness.Delete(id);
-            return Ok(new { messange = "xóa thành công" });
-        }
     }
 }

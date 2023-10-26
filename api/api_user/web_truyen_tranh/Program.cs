@@ -18,10 +18,6 @@ builder.Services.AddTransient<IstoriesBusiness, storiesBusiness>();
 builder.Services.AddTransient<IcategoriesRepository, categoriesRopository>();
 builder.Services.AddTransient<IcategoriesBusiness, categoriesBusiness>();
 
-builder.Services.AddTransient<Icategorie_storieRepository, categorie_storieRepository>();
-builder.Services.AddTransient<Icategorie_storieBusiness, categorie_storieBusiness>();
-
-
 builder.Services.AddTransient<IchapterRepository, chapterRepository>();
 builder.Services.AddTransient<IchapterBusiness, chapterBusiness>();
 

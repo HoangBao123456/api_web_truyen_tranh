@@ -11,9 +11,5 @@ namespace DataAccessLayer
     {
         List<starsModel> GetDatabyStar(string stars);
         List<starsModel> GetDatabyCount(string count);
-
-        bool Create(starsModel model);
-        bool Update(starsModel model);
-        bool Delete(string id);
     }
 }

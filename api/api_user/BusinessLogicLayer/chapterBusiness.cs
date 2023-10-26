@@ -24,17 +24,5 @@ namespace BusinessLogicLayer
         {
             return _res.GetDatabychapter(stories_id);
         }
-        public chapterModel GetDatabyId(string id)
-        {
-            return _res.GetDatabyId(id);
-        }
-        public bool Update(chapterModel model)
-        {
-            return _res.Update(model);
-        }
-        public bool Delete(string id)
-        {
-            return _res.Delete(id);
-        }
     }
 }

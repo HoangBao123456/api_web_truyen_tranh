@@ -12,10 +12,5 @@ namespace DataAccessLayer
         storiesModel GetDatabyName(string name);
         List<storiesModel> GetData();
         storiesModel GetDatabyId(string id);
-
-
-        bool Create(storiesModel model);
-        bool Update(storiesModel model);
-        bool Delete(string id);
     }
 }

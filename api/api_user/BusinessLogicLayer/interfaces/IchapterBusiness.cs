@@ -12,9 +12,5 @@ namespace DataAccessLayer
         List<chapterModel> GetDatabychapter(string stories_id);
         List<chapterModel> GetData();
         chapterModel GetDatabyId(string id);
-
-        bool Create(chapterModel model);
-        bool Update(chapterModel model);
-        bool Delete(string id);
     }
 }
