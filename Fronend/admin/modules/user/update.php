@@ -2,6 +2,7 @@
 get_layout_admin('sections', 'head_admin');
 get_layout_admin('sections', 'siderbar');
 $id = $_GET['id'];
+$render = db_render("api/account/get_by-account_id/{$id}");
 if(isset($_POST['btn_add'])){
     $error = array();
     if(empty($_POST['avatar'])){
@@ -37,6 +38,7 @@ if(isset($_POST['btn_add'])){
 
     if(empty($error)){
         db_update_account($id,$avatar,$name,$username,$password,$role,$status,'api/account/update-account');
+        redirect_to("?mod=user&act=main");
     }
 }
 ?>
@@ -54,17 +56,17 @@ if(isset($_POST['btn_add'])){
                         <div class="display">
                             <div class="sub avatar">
                                 <label>Avatar</label>
-                                <input type="text" name="avatar" value="">
+                                <input type="text" name="avatar" value="<?php echo $render['avatar'] ?>">
                             </div>
                             <div class="sub name">
                                 <label>Họ và tên</label>
-                                <input type="text" name="name" value="">
+                                <input type="text" name="name" value="<?php echo $render['fullname'] ?>">
                             </div>
                         </div>
                         <div class="display">
                             <div class="sub username">
                                 <label>Tài khoản</label>
-                                <input type="text" name="username" value="">
+                                <input type="text" name="username" value="<?php echo $render['username'] ?>">
                             </div>
                             <div class="sub password">
                                 <label>Mật khẩu</label>

@@ -1,7 +1,8 @@
 <?php
-$render = db_render("api/stories/get_list_stories");
 get_layout_admin('sections', 'head_admin');
 get_layout_admin('sections', 'siderbar');
+$name = $_GET['name'];
+$render = db_render("api/stories/get_by-name/{$name}");
 if (isset($_POST['btn_serch'])) {
     if (!empty($_POST['name'])) {
         $name = $_POST['name'];
@@ -53,26 +54,23 @@ if (isset($_POST['btn_serch'])) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        foreach ($render as $item) {
-                        ?>
                             <tr>
                                 <td></td>
                                 <td class="images">
-                                    <img src="<?php echo $item['images'] ?>" alt="">
+                                    <img src="<?php echo $render['images'] ?>" alt="">
                                 </td>
                                 <td>
-                                    <?php echo $item['name'] ?>
+                                    <?php echo $render['name'] ?>
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="?mod=story&act=update&id=<?php echo $item['id'] ?>">
+                                        <a href="?mod=story&act=update&id=<?php echo $render['id'] ?>">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                             </svg>
                                         </a>
-                                        <form method="post" action="?mod=story&act=delete&id=<?php echo $item['id'] ?>">
+                                        <form method="post" action="?mod=story&act=delete&id=<?php echo $render['id'] ?>">
                                             <input type="hidden" name="_method" value="delete"> <input type="hidden"> <button type="submit">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash font-medium-2 text-body">
                                                     <polyline points="3 6 5 6 21 6"></polyline>
@@ -83,10 +81,6 @@ if (isset($_POST['btn_serch'])) {
                                     </div>
                                 </td>
                             </tr>
-                        <?php
-                        }
-                        ?>
-
                     </tbody>
                 </table>
             </div>
