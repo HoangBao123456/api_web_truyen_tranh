@@ -1,5 +1,6 @@
 <?php
 $render = db_render("api/admin_main/get_admin_main");
+$render_chapter = db_render("api/admin_main/get_admin_main_chapter");
 get_layout_admin('sections', 'head_admin');
 get_layout_admin('sections', 'siderbar');
 ?>
@@ -48,7 +49,7 @@ get_layout_admin('sections', 'siderbar');
                         </div>
                         <div class="card_info">
                         <?php
-                            foreach ($render as $item) {
+                            foreach ($render_chapter as $item) {
                             ?>
                                 <h5><?php echo $item['chapter'] ?></h5>
                             <?php

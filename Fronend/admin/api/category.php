@@ -1,22 +1,14 @@
 <?php
-function db_post_account($avatar, $name, $username, $password, $role, $status, $url)
+function db_create_category($name,$des, $url)
 {
     // URL của API hoặc trang web bạn muốn gửi yêu cầu POST đến
     $url = "https://localhost:7268/{$url}";
 
     // Dữ liệu bạn muốn gửi trong yêu cầu POST, ví dụ: một mảng dữ liệu
     $data = array(
-        'avatar' => $avatar,
-        'fullname' => $name,
-        'username' => $username,
-        'password' => $password,
-        'role' => $role,
-        'status' => $status,
         'id' => '',
-        'sum_user' => '',
-        'sum_admin' => '',
-        'sum_content' => '',
-        'sum_user_no' => ''
+        'name_categories' => $name,
+        'descr' => $des
     );
     $json_data = json_encode($data);
 
@@ -53,8 +45,7 @@ function db_post_account($avatar, $name, $username, $password, $role, $status, $
         echo 'Không có phản hồi hoặc có lỗi.';
     }
 }
-
-function db_update_account($id,$avatar, $name, $username, $password, $role, $status, $url)
+function db_update_category($id,$name, $des, $url)
 {
     // URL của API hoặc trang web bạn muốn gửi yêu cầu POST đến
     $url = "https://localhost:7268/{$url}";
@@ -62,16 +53,8 @@ function db_update_account($id,$avatar, $name, $username, $password, $role, $sta
     // Dữ liệu bạn muốn gửi trong yêu cầu POST, ví dụ: một mảng dữ liệu
     $data = array(
         'id' => $id,
-        'avatar' => $avatar,
-        'fullname' => $name,
-        'username' => $username,
-        'password' => $password,
-        'role' => $role,
-        'status' => $status,
-        'sum_user' => '',
-        'sum_admin' => '',
-        'sum_content' => '',
-        'sum_user_no' => ''
+        'name_categories' => $name,
+        'descr' => $des
     );
     $json_data = json_encode($data);
 
@@ -107,41 +90,4 @@ function db_update_account($id,$avatar, $name, $username, $password, $role, $sta
     } else {
         echo 'Không có phản hồi hoặc có lỗi.';
     }
-}
-function db_search_account($name){
-    $keyword = urlencode($name);
-
-    // URL của API C# tìm kiếm
-    $api_url = "https://localhost:7268/api/account/get_by-account/{$keyword}";
-
-    // Khởi tạo cURL
-    $ch = curl_init();
-
-    // Cấu hình cURL để nhận dữ liệu JSON
-    curl_setopt($ch, CURLOPT_URL, $api_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-    // Gửi yêu cầu GET
-    $response = curl_exec($ch);
-
-    // Kiểm tra lỗi cURL
-    if (curl_errno($ch)) {
-        echo "Lỗi cURL: " . curl_error($ch);
-    } else {
-        // Xử lý kết quả JSON
-        $data = json_decode($response, true);
-        if ($data) {
-            print_r($data);
-        } else {
-            echo "Không thể phân tích kết quả JSON.";
-        }
-    }
-
-    // Đóng kết nối cURL
-    curl_close($ch);
-
-     // Render phản hồi từ APIx
-     return $data;
 }
