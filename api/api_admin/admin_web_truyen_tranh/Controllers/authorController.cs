@@ -21,6 +21,12 @@ namespace admin_web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetData();
         }
+        [Route("get_by-author-id/{id}")]
+        [HttpGet]
+        public authorModel GetDatabyAuthorId(string id)
+        {
+            return _truyenBusiness.GetDatabyAuthorId(id);
+        }
         [Route("get_by-author/{author}")]
         [HttpGet]
         public authorModel GetDatabyAuthor(string author)
@@ -42,8 +48,8 @@ namespace admin_web_truyen_tranh.Controllers
             return model;
         }
         [Route("delete-author")]
-        [HttpPost]
-        public IActionResult DeleteItem(string id)
+        [HttpDelete]
+        public IActionResult DeleteItem(int id)
         {
             _truyenBusiness.Delete(id);
             return Ok(new { messange = "xóa thành công" });

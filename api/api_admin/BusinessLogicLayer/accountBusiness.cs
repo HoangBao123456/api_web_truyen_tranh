@@ -35,6 +35,10 @@ namespace BusinessLogicLayer
         {
             return _res.Create(model);
         }
+        public accountModel GetDatabyAccountId(string id)
+        {
+            return _res.GetDatabyAccountId(id);
+        }
         public accountModel GetDatabyAccount(string fullname)
         {
             return _res.GetDatabyAccount(fullname);

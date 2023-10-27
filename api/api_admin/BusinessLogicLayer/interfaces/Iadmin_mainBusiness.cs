@@ -10,5 +10,7 @@ namespace DataAccessLayer
     public partial interface Iadmin_mainBusiness
     {
         List<admin_mainModel> GetData();
+        List<admin_mainModel> GetDataChapter();
+
     }
 }

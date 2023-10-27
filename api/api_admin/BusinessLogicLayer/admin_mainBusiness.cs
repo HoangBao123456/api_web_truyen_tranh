@@ -15,5 +15,9 @@ namespace BusinessLogicLayer
         {
             return _res.GetData();
         }
+        public List<admin_mainModel> GetDataChapter()
+        {
+            return _res.GetDataChapter();
+        }
     }
 }

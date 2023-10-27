@@ -8,13 +8,29 @@ namespace DataAccessLayer
         {
             _dbHelper = dbHelper;
         }
-        public storiesModel GetDatabyName(string name)
+        public storiesModel GetDataby(string name)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_story_name",
+                     "@name", name);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<storiesModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public storiesModel GetDatabyid(string id)
         {
             string msgError = "";
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_id",
-                     "@name", name);
+                     "@id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<storiesModel>().FirstOrDefault();

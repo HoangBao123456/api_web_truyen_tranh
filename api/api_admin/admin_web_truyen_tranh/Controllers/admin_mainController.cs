@@ -21,5 +21,11 @@ namespace admin_web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetData();
         }
+        [Route("get_admin_main_chapter")]
+        [HttpGet]
+        public List<admin_mainModel> GetDataChapter()
+        {
+            return _truyenBusiness.GetDataChapter();
+        }
     }
 }

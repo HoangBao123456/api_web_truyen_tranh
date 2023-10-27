@@ -8,6 +8,22 @@ namespace DataAccessLayer
         {
             _dbHelper = dbHelper;
         }
+        public categoriesModel GetDatabyId(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "get_by_category_id",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<categoriesModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public categoriesModel GetDatabyName(string name)
         {
             string msgError = "";
@@ -70,24 +86,6 @@ namespace DataAccessLayer
                 "@desc", model.descr
                 );
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public bool Delete(string id)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "delete_categories",
-                     "@id", id);
-                if ((result != null && !string.IsNullOrEmpty(id.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
                 }

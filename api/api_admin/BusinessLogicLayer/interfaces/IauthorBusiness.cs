@@ -10,10 +10,12 @@ namespace DataAccessLayer
     public partial interface IauthorBusiness
     {
         List<authorModel> GetData();
+        authorModel GetDatabyAuthorId(string id);
+
         authorModel GetDatabyAuthor(string author_name);
 
         bool Create(authorModel model);
         bool Update(authorModel model);
-        bool Delete(string id);
+        bool Delete(int id);
     }
 }

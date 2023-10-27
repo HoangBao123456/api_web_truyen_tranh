@@ -24,5 +24,20 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+        public List<admin_mainModel> GetDataChapter()
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "admin_main_chapter");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<admin_mainModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

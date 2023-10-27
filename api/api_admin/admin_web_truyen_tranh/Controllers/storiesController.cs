@@ -27,11 +27,17 @@ namespace web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetData_star();
         }
+        [Route("get_by-id/{id}")]
+        [HttpGet]
+        public storiesModel GetDatabyid(string id)
+        {
+            return _truyenBusiness.GetDatabyid(id);
+        }
         [Route("get_by-name/{name}")]
         [HttpGet]
-        public storiesModel GetDatabyName(string name)
+        public storiesModel GetDataby(string name)
         {
-            return _truyenBusiness.GetDatabyName(name);
+            return _truyenBusiness.GetDataby(name);
         }
         [Route("create-soties")]
         [HttpPost]
@@ -40,15 +46,15 @@ namespace web_truyen_tranh.Controllers
             _truyenBusiness.Create(model);
             return model;
         }
-        [Route("update-truyen")]
+        [Route("update-stories")]
         [HttpPost]
         public storiesModel UpdateItem([FromBody] storiesModel model)
         {
             _truyenBusiness.Update(model);
             return model;
         }
-        [Route("delete-truyen")]
-        [HttpPost]
+        [Route("delete-stories")]
+        [HttpDelete]
         public IActionResult DeleteItem(string id)
         {
             _truyenBusiness.Delete(id);

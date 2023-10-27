@@ -24,6 +24,22 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+        public accountModel GetDatabyAccountId(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "admin_get_by_account_id",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<accountModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public accountModel GetDatabyAccount(string fullname)
         {
             string msgError = "";

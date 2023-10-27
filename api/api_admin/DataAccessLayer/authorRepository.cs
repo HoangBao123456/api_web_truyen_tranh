@@ -24,6 +24,22 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+        public authorModel GetDatabyAuthorId(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "admin_get_by_author_id",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<authorModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public authorModel GetDatabyAuthor(string author_name)
         {
             string msgError = "";
@@ -79,7 +95,7 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             string msgError = "";
             try

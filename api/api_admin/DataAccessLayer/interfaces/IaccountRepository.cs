@@ -10,6 +10,8 @@ namespace DataAccessLayer
     public partial interface IaccountRepository
     {
         List<accountModel> GetData();
+        accountModel GetDatabyAccountId(string id);
+
         accountModel GetDatabyAccount(string fullname);
         accountModel GetSum();
         accountModel GetSumNo();

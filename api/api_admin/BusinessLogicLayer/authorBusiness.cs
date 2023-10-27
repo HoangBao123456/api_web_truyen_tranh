@@ -19,6 +19,10 @@ namespace BusinessLogicLayer
         {
             return _res.Create(model);
         }
+        public authorModel GetDatabyAuthorId(string id)
+        {
+            return _res.GetDatabyAuthorId(id);
+        }
         public authorModel GetDatabyAuthor(string author_name)
         {
             return _res.GetDatabyAuthor(author_name);
@@ -27,7 +31,7 @@ namespace BusinessLogicLayer
         {
             return _res.Update(model);
         }
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             return _res.Delete(id);
         }

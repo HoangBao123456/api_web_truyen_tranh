@@ -21,6 +21,12 @@ namespace admin_web_truyen_tranh.Controllers
         {
             return _truyenBusiness.GetData();
         }
+        [Route("get_by-account_id/{id}")]
+        [HttpGet]
+        public accountModel GetDatabyAccountId(string id)
+        {
+            return _truyenBusiness.GetDatabyAccountId(id);
+        }
         [Route("get_by-account/{fullname}")]
         [HttpGet]
         public accountModel GetDatabyAccount(string fullname)

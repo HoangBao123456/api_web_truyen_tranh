@@ -9,7 +9,9 @@ namespace DataAccessLayer
 {
     public partial interface IstoriesRepository
     {
-        storiesModel GetDatabyName(string name);
+        storiesModel GetDatabyid(string id);
+        storiesModel GetDataby(string name);
+
         List<storiesModel> GetData();
         List<storiesModel> GetData_star();
 
