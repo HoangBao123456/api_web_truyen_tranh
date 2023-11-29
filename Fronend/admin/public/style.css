@@ -40,7 +40,6 @@ body .main_menu .menu_content ul .nav_item:hover a {
 }
 body .app_content {
   margin-left: 260px;
-  height: 100vh;
 }
 body .app_content .content_wrapper {
   padding: 20px;
@@ -247,6 +246,10 @@ body .footer .right {
 }
 .card .table table tbody tr td {
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 .card .table table tbody tr td .d-flex {
   display: flex;
