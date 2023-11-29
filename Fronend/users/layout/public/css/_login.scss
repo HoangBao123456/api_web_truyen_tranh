@@ -1,14 +1,16 @@
-.form_login{
+.form_login {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #23242a;
-    .box{
+
+    .box {
         position: relative;
         width: 380px;
         height: 420px;
-        form{
+
+        form {
             position: absolute;
             background-color: #222;
             padding: 40px;
@@ -16,40 +18,36 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            h2{
+
+            h2 {
                 color: #fff;
                 font-weight: 500;
                 text-align: center;
                 letter-spacing: 0.1em;
             }
-            .inputbox{
+
+            .inputbox {
                 position: relative;
                 margin-top: 20px;
-                input{
+
+                input {
                     position: relative;
                     width: 95%;
                     padding: 10px;
                     color: #23242a;
                     font-size: 1em;
                 }
-                p{
+
+                p {
                     color: red;
                 }
             }
-            #login{
+
+            #login {
                 width: 100%;
                 padding: 7px;
                 margin-top: 20px;
                 margin-bottom: 10px
-            }
-            .link{
-                a{
-                    @include a();
-                }
-                a:hover{
-                    color: red;
-                    transition: 0.5s;
-                }
             }
         }
     }
