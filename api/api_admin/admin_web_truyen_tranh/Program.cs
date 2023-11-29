@@ -31,6 +31,8 @@ builder.Services.AddTransient<IaccountBusiness, accountBusiness>();
 builder.Services.AddTransient<IcategoriesRepository, categoriesRopository>();
 builder.Services.AddTransient<IcategoriesBusiness, categoriesBusiness>();
 
+builder.Services.AddTransient<IchapterRepository, chapterRepository>();
+builder.Services.AddTransient<IchapterBusiness, chapterBusiness>();
 
 IConfiguration configuration = builder.Configuration;
 var appSettingsSection = configuration.GetSection("AppSettings");
